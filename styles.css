@@ -146,16 +146,32 @@ a:active {
     border-top: 1px solid hsla(0, 0%, 59%, 0.2);
     display: flex;
     align-items: center;
+    color: var(--soft-blue);
 }
 
 .card-bottom img {
     margin-right: 1rem;
-    border: 1px solid var(--white);
+    border: 1px solid transparent;
     border-radius: 1.875rem;
+}
+
+.card-bottom:hover img,
+.card-bottom:focus img {
+    border-color: var(--white);
+}
+
+.card-bottom:hover,
+.card-bottom:focus {
+    color: var(--soft-blue);
 }
 
 .card-bottom span {
     color: var(--white);
+}
+
+.card-bottom:hover span,
+.card-bottom:focus span {
+    color: var(--cyan);
 }
 
 .rounded {
