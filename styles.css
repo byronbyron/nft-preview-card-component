@@ -10,6 +10,12 @@
     --white: hsl(0, 0%, 100%);
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Outfit', sans-serif;
     font-size: 1rem;
@@ -20,7 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     min-width: 375px;
-    height: 100vh;
+    min-height: 100vh;
     color: var(--soft-blue);
     background-color: var(--dark-blue-main);
 }
@@ -39,14 +45,13 @@ a:active {
 .container {
     display: flex;
     align-items: center;
-    max-width: 327px;
-    padding-left: 1rem;
-    padding-right: 1rem
+    max-width: 375px;
+    padding: 3.75rem 1.5rem;
 }
 
 @media (min-width:768px) {
     .container {
-        max-width: 350px;
+        max-width: 398px;
     }
 
 }
@@ -100,7 +105,9 @@ a:active {
 
 .card-img {
     display: block;
+    max-width: 100%;
     width: 100%;
+    height: auto;
 }
 
 .card-body h1 {
@@ -182,10 +189,7 @@ a:active {
     color: white;
     font-size: 11px;
     text-align: center;
-    width: 100%;
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
+    padding: 1rem 0;
 }
 
 .attribution a {
