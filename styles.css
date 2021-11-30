@@ -179,12 +179,21 @@ a:active {
 }
 
 .attribution {
-    display: none;
     color: white;
     font-size: 11px;
-    text-align: center
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
 }
 
 .attribution a {
+    text-decoration: underline;
     color: white
+}
+
+.attribution a:hover,
+.attribution a:focus {
+    color: var(--cyan);
 }
